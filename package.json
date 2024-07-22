@@ -1,5 +1,5 @@
 {
-  "name": "finance-tutorial",
+  "name": "finance-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:seed": "bun ./scripts/seed.ts",
+    "db:seed": "tsx ./scripts/seed.ts",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
@@ -58,6 +58,7 @@
     "sonner": "^1.4.41",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.16.2",
     "zod": "^3.23.6",
     "zustand": "^4.5.2"
   },

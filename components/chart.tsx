@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { AreaChart, BarChart3, FileSearch, LineChart, Loader2 } from "lucide-react";
 
-import { usePaywall } from "@/features/subscriptions/hooks/use-paywall";
-
 import { 
   Select, 
   SelectTrigger, 
@@ -31,13 +29,8 @@ type Props = {
 
 export const Chart = ({ data = [] }: Props) => {
   const [chartType, setChartType] = useState("area");
-  const { shouldBlock, triggerPaywall } = usePaywall();
 
   const onTypeChange = (type: string) => {
-    if (type !== "area" && shouldBlock) {
-      triggerPaywall();
-      return;
-    }
 
     setChartType(type);
   };
